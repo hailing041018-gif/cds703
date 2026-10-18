@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  background: linear-gradient(145deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.wrap {
+  position: relative;
+  max-width: 840px;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #ffd166;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.stats {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 1rem;
+}
+
+.stats strong {
+  color: #06d6a0;
+  font-variant-numeric: tabular-nums;
+}
+
+.hint {
+  font-size: 0.875rem;
+  color: #a8b2d1;
+  margin-bottom: 0.75rem;
+}
+
+#game {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  aspect-ratio: 800 / 520;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  background: #2d4a3e;
+  cursor: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 15, 30, 0.75);
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.panel {
+  text-align: center;
+  padding: 2rem 2.5rem;
+  background: linear-gradient(180deg, #252a45 0%, #1e2238 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 209, 102, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  max-width: 90%;
+}
+
+.panel h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #ffd166;
+}
+
+.panel p {
+  margin-bottom: 1.25rem;
+  color: #c9d1e8;
+  line-height: 1.5;
+}
+
+#start-btn {
+  font-size: 1.1rem;
+  padding: 0.65rem 2rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ef476f, #f78c6b);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+#start-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(239, 71, 111, 0.45);
+}
+
+#start-btn:active {
+  transform: scale(0.98);
+}
